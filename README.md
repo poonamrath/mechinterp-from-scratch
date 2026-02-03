@@ -63,22 +63,6 @@ Design constraints:
 - Aggressive use of disk-backed memmaps
 - SAE training on CPU for stability
 
-## Repo structure
-mechinterp-from-scratch/
-README.md
-requirements.txt
-notebooks/
-00_setup_mps.ipynb # environment & MPS sanity checks
-10_ioi_minimal.ipynb # minimal IOI-style causal patching
-src/
-config.py # central experiment config
-model.py # model + tokenizer loading
-ioi.py # IOI-style dataset
-patching.py # activation patching utilities
-cache_activations.py # disk-backed activation caching
-sae_model.py # sparse autoencoder
-train_sae.py # SAE training loop
-smoke_test.py # end-to-end sanity test
 
 Running smoke test (model+hook) should return these outputs
 device: mps
@@ -104,3 +88,13 @@ Next steps:
 - Multi-layer or residual-stream SAEs
 - Multimodal interpretability (e.g. Gemma-style models)
 - Feature-level steering & editing
+
+## Resources and Inspiration
+- IOI paper (Interpretability in the wild - a circuit for indirect object identification in GPT-2 small): https://arxiv.org/abs/2211.00593
+- On the biology of an LLM: https://transformer-circuits.pub/2025/attribution-graphs/biology.html
+- https://docs.google.com/document/d/1dKAjGPdKdyemy5rZUI96nYwNDonKfXM6H7p58FF5rcE/edit?usp=sharing
+- https://www.alignmentforum.org/posts/6P8GYb4AjtPXx6LLB/tips-and-code-for-empirical-research-workflows
+- https://www.lesswrong.com/posts/wSKPuBfgkkqfTpmWJ/auditing-language-models-for-hidden-objectives
+- relationship between mechinterp and alignment (empirical alignment research vs. mechanistic interpretability). for example, anthropic's model organisms work, neel nanda's move toward pragmatic interpretability (https://www.youtube.com/watch?v=k93o4R145Os)... 
+- mechinterp's primary goals: *why* the models *do* what they do, *why* they do one thing vs another, *how* they're doing it
+TODO: add the mindmap of related concepts that intuitively seem related
