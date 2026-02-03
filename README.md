@@ -97,4 +97,8 @@ Next steps:
 - https://www.lesswrong.com/posts/wSKPuBfgkkqfTpmWJ/auditing-language-models-for-hidden-objectives
 - relationship between mechinterp and alignment (empirical alignment research vs. mechanistic interpretability). for example, anthropic's model organisms work, neel nanda's move toward pragmatic interpretability (https://www.youtube.com/watch?v=k93o4R145Os)... 
 - mechinterp's primary goals: *why* the models *do* what they do, *why* they do one thing vs another, *how* they're doing it
-TODO: add the mindmap of related concepts that intuitively seem related
+TODO: add a mindmap of related concepts that intuitively seem related
+
+## Grounding in domain
+Personal fave: bio (the "language" of bio is different from language models). what does this mean in how we would approach interpretability?
+- Push on my intuition: any sufficiently capable system trained under constraint will learn an *internal* structure that exceeds its *explicit objective* and you only see it if you look inside. Examples: LLMs do it (altered behavior when they're being evaluated vs when they think they're not); sorting algos does it (clustering, even though explicit objective is sorting); biological systems *are* pretty much it, such that a virtual cell model may predict perturbation response accurately while internally representing something else that's salient to the cell's survival....(i guess we acknowledge this to be the case)
